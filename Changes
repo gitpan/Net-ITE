@@ -1,0 +1,28 @@
+Revision history for Perl extension Net::ITE
+
+0.03	 Fri Jan 17 2003
+
+	 - Added Net::ITE->topics()
+
+	 - Removed extraneous debugging output.
+
+0.02	 Wed Jan 15 2003
+
+	 - Added Net::ITE->new_topic()
+
+	 - Added hooks to Net::ITE->topic() and Net::ITE::Topic->posts()
+	   to return a list or an iterator depending on wantarray
+	   context.
+
+	 - Added calls to XML::TrackBack error reporting methods.
+
+	 - Added __PACKAGE__ prefix to internal sub-packages.
+
+	 - Added ping.t
+
+	 - Updated POD.
+
+0.01	 Tue Jan 14 2003
+
+	 - Intial revision.
+
