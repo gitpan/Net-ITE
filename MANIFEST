@@ -5,5 +5,3 @@ Makefile.PL
 t/ping.t
 t/posts.t
 t/topics.t
-
-CPAN/MakeMaker.pm

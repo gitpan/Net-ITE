@@ -39,23 +39,19 @@ OOP-ish interface to the Internet Topic Exchange.
 
 =item *
 
-This is alpha quality software. Buyer beware.
-
-=item *
-
 The error handling sucks and will be addressed in future releases.
 
 =back
 
 =cut
 
-=head1 Net::ITE
-
-=cut
-
 package Net::ITE;
 
-$Net::ITE::VERSION = '0.03';
+$Net::ITE::VERSION = '0.05';
+
+=head1 PACKAGE METHODS
+
+=cut
 
 =head2 __PACKAGE__->new($blogname)
 
@@ -68,6 +64,14 @@ sub new {
   my $blog = shift;
   return bless \$blog,$pkg;
 }
+
+=head1 OBJECT METHODS
+
+=cut
+
+=head1 Net::ITE
+
+=cut
 
 =head2 $ite->topics()
 
@@ -242,8 +246,8 @@ sub ping {
   $data->{blog_name} ||= ${$self->{blog}};
 
   if (! $tb) {
-    require XML::TrackBack;
-    $tb = XML::TrackBack->new();
+    require Net::TrackBack;
+    $tb = Net::TrackBack->new();
   }
 
   $tb->send_ping($data);
@@ -399,49 +403,26 @@ return 1;
 
 =head1 VERSION
 
-0.03
+0.05
 
 =head1 DATE
 
-January 17, 2003
+$Date: 2003/03/20 05:09:14 $
 
 =head1 AUTHOR
 
 Aaron Straup Cope
 
-=head1 REQUIREMENTS
-
-=over 4
-
-=item *
-
-I<LWP::UserAgent>
-
-=item *
-
-I<HTTP::Request>
-
-=item *
-
-I<XML::RSS>
-
-=item *
-
-I<XML::TrackBack>
-
-=back
-
 =head1 SEE ALSO
 
 http://topicexchange.com
-
-http://www.mplode.com/tima/files/TrackBack.pm
 
 =head1 LICENSE
 
 Copyright (c) 2003 Aaron Straup Cope, All Rights Reserved.
 
-This is free software, you may use it and distribute it under the same terms as Perl itself.
+This is free software, you may use it and distribute it under the same
+terms as Perl itself.
 
 =cut
 

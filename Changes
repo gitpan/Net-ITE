@@ -1,5 +1,23 @@
 Revision history for Perl extension Net::ITE
 
+0.05	 Thu Mar 20 2003
+
+	 - Replaced requirement on XML::TrackBack with Net::TrackBack
+
+	 - Replaced CPAN::MakeMaker with ExtUtils until I can
+	   wrap my mind around what's going on with the Module::*
+	   stuff
+
+	 - Wondered why I'm still sitting here watching the talking
+           heads wax poetic about Gulf War 2.0 instead of going to 
+	   bed.
+	   
+	 - Updated POD
+
+0.04	 Tue Feb 18 2003
+
+	 - Added guess() package method.
+
 0.03	 Fri Jan 17 2003
 
 	 - Added Net::ITE->topics()

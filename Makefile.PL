@@ -1,4 +1,4 @@
-use CPAN::MakeMaker;
+use ExtUtils::MakeMaker;
 WriteMakefile(
 	      'NAME'	=> 'Net::ITE.pm',
 	      ($[ >= 5.005) ?
@@ -9,7 +9,7 @@ WriteMakefile(
 				 LWP::UserAgent => '0',
 				 HTTP::Request  => '0',
 				 XML::RSS       => '0.96',
-				 XML::TrackBack => '0.2',
+				 Net::TrackBack => '0.21',
 				},
 	      dist	        => {COMPRESS => 'gzip', SUFFIX => 'tar.gz'},
 );
